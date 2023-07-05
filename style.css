@@ -46,7 +46,7 @@ nav ul li a{
     content: '';
     width: 0%;
     height: 3px;
-    background: #ff004f;
+    background: #39c6df;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -64,5 +64,8 @@ nav ul li a{
     margin-top: 20px;
  }
  .haeder-text h1 span{
-    color: #ff004f;
+    color: #8de8f6;
+ }
+ button{
+    background-color: rgb(82, 229, 229);
  }
