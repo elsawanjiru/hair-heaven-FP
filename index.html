@@ -20,20 +20,21 @@
             </ul>
         </nav>
         <div class="haeder-text">
-          <img src="./mkmj-removebg-preview.png" alt="">
+          <img class="imagez" src="./mkmj-removebg-preview.png" alt="">
           <h1>WOMEN'S & MEN'S HAIRDRESSERS</h1>
           <button>view our prices</button>
         </div>
        </div> 
        <!------------------------- price list -------------------------->
-       <div id="Price list">
-        <div id="priceListContainer"></div>
-
-       </div>
+       <h1>Price List</h1>
+    
+       <div id="priceListContainer"></div>
+   
 
        <!-- --------0--------------vacancies--------------------------------- -->
-       <div class="vacancies">
        <h1 id="h1">VACANCIES</h1>
+       <div class="vacancies">
+     
        <div class="LEFT">
         <H2>HAIR HEAVEN IS LOOKING FOR <br>
              HAIR STYLISTS</H2>
@@ -56,64 +57,70 @@
        </div>
        <div class="right">
         <h1>ENTER YOUR DETAILS BELOW</h1>
+  
         <form>
-            <input type="text" aria-placeholder="Name">
-            <input type="email" aria-placeholder="Address">
-            <input type="text" aria-placeholder="Residence">
-            <input type="number" aria-placeholder="Phone number">
-            <input type="email" aria-placeholder="E-mail address">
-
-            <button type="button" onclick="alert">send</button>
-        </form>
+            <input type="text" placeholder="Name" id="nameInput">
+            <input type="email" placeholder="Address" id="addressInput">
+            <input type="text" placeholder="Residence" id="residenceInput">
+            <input type="tel" placeholder="Phone number" id="phoneInput">
+            <input type="email" placeholder="E-mail address" id="emailInput">
+          
+            <button type="button" onclick="submitForm()">Send</button>
+          </form>
        </div>
 
     </div>
 
     <!-- -----------------------------Contact--------------------------------- -->
- 
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> contact@anjy.com</p>
-                    <p><i class="fa-sharp fa-solid fa-square-phone"></i>0123456789</p>
-                    <div class="social-icons">
-                        <a href=""></a><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""></a><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""></a><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""></a><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <a href="" class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                   <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="message" rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class="btn btn2"> Submit</button>
-                   </form>
-                     
-                </div>
-            </div>
-        </div>
+        <h1>Contact</h1>
+    
+        <h2>Opening Hours</h2>
+        <table>
+            <tr>
+                <td>Monday</td>
+                <td>Closed</td>
+            </tr>
+            <tr>
+                <td>Tuesday - Friday</td>
+                <td>09:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>09:00 - 15:00</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Closed</td>
+            </tr>
+        </table>
+    
+        <h2>Send Us a Message</h2>
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">E-mail address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message/comment:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <input type="submit" value="book us now">
+        </form>
 
         <!-- ----------------------------------footer------------------- -->
-        <div class="footer">
-            <h1>AMSTERDAMSTRAAT 68 <br>
-                2032 PS HAARLEM</h1>
-
-                <p>Women's & men's hair salon. <br>
-                    With and without an appointmen</p>
-
-                    <p>CALL: 012 - 345 678  90</p>
-
-                    <button>book now</button>
-
-        </div>
+        <footer class="footer">
+            <div class="footer-content">
+              <h1 class="footer-title">Hair Heaven</h1>
+              <p class="footer-address">AMSTERDAMSTRAAT 68, 2032 PS HAARLEM</p>
+              <p class="footer-description">Women's & men's hair salon. With and without an appointment.</p>
+              <p class="footer-contact">CALL: 012 - 345 678 90</p>
+              <button class="footer-button">Book Now</button>
+            </div>
+          </footer>
+          
 
 
-
-        <script src="script.js"></script>
+        <script src="./script.js"></script>
 </body>
 </html>
