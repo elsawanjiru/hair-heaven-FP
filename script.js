@@ -1,42 +1,55 @@
-const priceListContainer = document.getElementById('priceListContainer');
+const priceListContainers = document.querySelectorAll('.priceListContainer');
 
-fetch('pricelist.json')
+fetch('http://localhost:4000/priceList')
   .then(response => response.json())
   .then(data => {
     const priceList = data.priceList;
 
-    // Iterate over each category in the price list data
-    Object.keys(priceList).forEach(category => {
-      // Create a category title element
-      const categoryTitle = document.createElement('h2');
-      categoryTitle.textContent = category;
+    priceListContainers.forEach(priceListContainer => {
+      // Clear any existing content in the container
+      priceListContainer.innerHTML = '';
 
-      // Create a list for the category
-      const categoryList = document.createElement('ul');
+      // Iterate over each category in the price list data
+      Object.keys(priceList).forEach(category => {
+        // Create a category title element
+        const categoryTitle = document.createElement('h2');
+        categoryTitle.textContent = category;
 
-      // Iterate over each service in the category
-      Object.keys(priceList[category]).forEach(service => {
-        // Get the price for the service
-        const price = priceList[category][service];
+        // Create a list for the category
+        const categoryList = document.createElement('ul');
 
-        // Create a list item with the service and price
-        const listItem = document.createElement('li');
-        listItem.textContent = `${service}\t\t${price}`;
+        // Get the services for the category
+        const services = priceList[category];
 
-        // Append the list item to the category list
-        categoryList.appendChild(listItem);
+        // Check if there are any services for the category
+        if (Object.keys(services).length > 0) {
+          // Iterate over each service in the category
+          Object.keys(services).forEach(service => {
+            // Get the price for the service
+            const price = services[service];
+
+            // Create a list item with the service and price
+            const listItem = document.createElement('li');
+            listItem.textContent = `${service}\t\t${price}`;
+
+            // Append the list item to the category list
+            categoryList.appendChild(listItem);
+          });
+
+          // Append the category title and list to the price list container
+          priceListContainer.appendChild(categoryTitle);
+          priceListContainer.appendChild(categoryList);
+        }
       });
-
-      // Append the category title and list to the price list container
-      priceListContainer.appendChild(categoryTitle);
-      priceListContainer.appendChild(categoryList);
     });
   })
   .catch(error => {
     console.error('Error fetching price list:', error);
   });
 
-//----------------------------- vacancies
+
+
+//----------------------------- vacancies----------------------------------//
 
   function submitForm() {
     const name = document.getElementById('nameInput').value;
@@ -51,6 +64,17 @@ fetch('pricelist.json')
     // Display an alert to indicate that the form is submitted
     alert('Form submitted!');
   }
+  //--------------commentes-------------------------------------//
+  const testimonials = document.querySelectorAll('.testimonial');
+const nextBtn = document.getElementById('next-btn');
+let currentTestimonialIndex = 0;
+
+nextBtn.addEventListener('click', () => {
+  testimonials[currentTestimonialIndex].classList.remove('active');
+  currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+  testimonials[currentTestimonialIndex].classList.add('active');
+});
+
 
 
   //---------------------------------contact------------------------//
