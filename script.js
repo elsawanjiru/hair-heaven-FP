@@ -1,52 +1,31 @@
-const priceListContainers = document.querySelectorAll('.priceListContainer');
+const priceListContainer = document.getElementById('priceListContainer');
 
 fetch('http://localhost:4000/priceList')
   .then(response => response.json())
   .then(data => {
-    const priceList = data.priceList;
+    const priceList = data;
 
-    priceListContainers.forEach(priceListContainer => {
-      // Clear any existing content in the container
-      priceListContainer.innerHTML = '';
+    priceList.forEach(category => {
+      const categoryTitle = document.createElement('h2');
+      categoryTitle.textContent = category.title;
 
-      // Iterate over each category in the price list data
-      Object.keys(priceList).forEach(category => {
-        // Create a category title element
-        const categoryTitle = document.createElement('h2');
-        categoryTitle.textContent = category;
+      const categoryList = document.createElement('ul');
 
-        // Create a list for the category
-        const categoryList = document.createElement('ul');
-
-        // Get the services for the category
-        const services = priceList[category];
-
-        // Check if there are any services for the category
-        if (Object.keys(services).length > 0) {
-          // Iterate over each service in the category
-          Object.keys(services).forEach(service => {
-            // Get the price for the service
-            const price = services[service];
-
-            // Create a list item with the service and price
-            const listItem = document.createElement('li');
-            listItem.textContent = `${service}\t\t${price}`;
-
-            // Append the list item to the category list
-            categoryList.appendChild(listItem);
-          });
-
-          // Append the category title and list to the price list container
-          priceListContainer.appendChild(categoryTitle);
-          priceListContainer.appendChild(categoryList);
+      Object.keys(category).forEach(key => {
+        if (key !== 'id' && key !== 'title') {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${key}\t\t${category[key]}`;
+          categoryList.appendChild(listItem);
         }
       });
+
+      priceListContainer.appendChild(categoryTitle);
+      priceListContainer.appendChild(categoryList);
     });
   })
   .catch(error => {
     console.error('Error fetching price list:', error);
   });
-
 
 
 //----------------------------- vacancies----------------------------------//
@@ -65,28 +44,10 @@ fetch('http://localhost:4000/priceList')
     alert('Form submitted!');
   }
   //--------------commentes-------------------------------------//
-  const testimonials = document.querySelectorAll('.testimonial');
-const nextBtn = document.getElementById('next-btn');
-let currentTestimonialIndex = 0;
-
-nextBtn.addEventListener('click', () => {
-  testimonials[currentTestimonialIndex].classList.remove('active');
-  currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-  testimonials[currentTestimonialIndex].classList.add('active');
-});
 
 
 
   //---------------------------------contact------------------------//
-  function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields");
-        return false;
-    }
-
-    return true;
-}
+  function showSuccessMessage() {
+    alert("Form submitted successfully!");
+  }
