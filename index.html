@@ -16,22 +16,22 @@
                 <li><a href="#priceListContainer">Price list</a></li>
                 <li><a href="#h1">vacancies</a></li>
                 <li><a href="#contact">Contact us</a></li>
-                <Button>Shop Products</Button>
+                <Button onclick="scrollToProductList()" >Shop Products</Button>
             </ul>
         </nav>
         <div class="haeder-text">
           <img class="imagez" src="./mkmj-removebg-preview.png" alt="">
           <h1>WOMEN'S & MEN'S HAIRDRESSERS</h1>
-          <button>view our prices</button>
+          <button><a href="#pricelist">View our prices</a></button>
         </div>
        </div> 
        <!------------------------- price list -------------------------->
-       <div class="pricelist">
-       <h1>Price List</h1>
-    
-       <div id="priceListContainer"></div>
-    </div>
-       
+      
+<div id="pricelist" class="pricelist">
+  <h1>Price List</h1>
+  <div id="priceListContainer"></div>
+</div>
+
    
 
        <!-- --------0--------------vacancies--------------------------------- -->
@@ -75,6 +75,7 @@
     </div>
     <!-- ---------------------------products----------------------------- -->
     <div id="productList">
+      <h1>our products</h1>
       <div class="product">
         <img src="full 1.webp" alt="Product 1">
         <h3>Product 1</h3>
@@ -110,7 +111,7 @@
 
 
     <!-- -------------------------------------comments--------------- -->
-    <div id="comments">TESTIMONIES :
+    <div id="comments">TESTIMONIES :</div>
     <div class="testimonial-container">
         <div class="testimonial active">
           <p>Dear ladies, I am always satisfied with the end result, always leave with a big smile <span class="author">- MALIKA MSISA -</span></p>
@@ -123,12 +124,12 @@
         </div>
       </div>
     
-    </div>
+    
 
       
 
     <!-- -----------------------------Contactus --------------------------------- -->
-        <div class="contact">
+        <div class="contact" id="contact">
     <h1>Contact</h1>
     
         <h2>Opening Hours</h2>

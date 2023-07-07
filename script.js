@@ -1,6 +1,6 @@
 const priceListContainer = document.getElementById('priceListContainer');
 
-fetch('http://localhost:4000/priceList')
+fetch('https://hair-heaven-json.onrender.com/pricelist')
   .then(response => response.json())
   .then(data => {
     const priceList = data;
@@ -42,6 +42,11 @@ fetch('http://localhost:4000/priceList')
 
     // Display an alert to indicate that the form is submitted
     alert('Form submitted!');
+  }
+  //-----------------------productjs----------------------//
+  function scrollToProductList() {
+    const productList = document.getElementById("productList");
+    productList.scrollIntoView({ behavior: "smooth" });
   }
   //--------------commentes-------------------------------------//
 
