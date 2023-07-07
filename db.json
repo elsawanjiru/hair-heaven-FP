@@ -1,43 +1,57 @@
 {
-    "priceList": {
-      "GENTLEMEN": {
-        "To cut": "€23.00",
-        "Wash and cut": "€29.00",
-        "Trim beard": "€5.00",
-        "Children up to 10 years": "€17.00"
-      },
-      "LADIES": {
-        "To cut": "from € 26.00",
-        "Wash and cut": "from € 32.00",
-        "Wash, cut and style": "from € 37.00",
-        "Wash, cut and blow dry": "from € 49.00",
-        "Wash and blow dry": "from € 23.50",
-        "Paint outgrowth": "from € 48.00"
-      },
-      "BABYLIGHTS, TONER, OLAPLEX": {
-        "Short hair": "€125.00",
-        "Medium length hair": "€175.00",
-        "Long hair": "€190.00"
-      },
-      "SCALP HIGHLIGHTS": {
-        "Short hair": "€49.00",
-        "Medium length hair": "from € 62.00",
-        "Long hair": "from € 72.00"
-      },
-      "FULL HIGHLIGHTS": {
-        "Short hair": "€59.00",
-        "Medium length hair": "€74.00",
-        "Long hair": "€87.00"
-      },
-      "PERMANENTLY": {
-        "Short hair": "€45.00",
-        "Medium length hair": "€59.00",
-        "Long hair": "€79.00"
-      },
-      "OLAPLEX": {
-        "Olaplex treatment": "€35.00",
-        "Surcharge thick hair": "from € 25,-"
-      }
+  "priceList": [
+    {
+      "id":"1",
+      "title":"GENTS",
+      "To cut": "€23.00",
+      "Wash and cut": "€29.00",
+      "Trim beard": "€5.00",
+      "Children up to 10 years": "€17.00"
+    }, 
+    {
+      "id":"2",
+      "title":"LADIES",
+      "To cut": "from € 26.00",
+      "Wash and cut": "from € 32.00",
+      "Wash, cut and style": "from € 37.00",
+      "Wash, cut and blow dry": "from € 49.00",
+      "Wash and blow dry": "from € 23.50",
+      "Paint outgrowth": "from € 48.00"
+    },
+    {
+      "id":"3",
+      "title":"BABY, TONER, OLAPLEX",
+      "Short hair": "€125.00",
+      "Medium length hair": "€175.00",
+      "Long hair": "€190.00"
+    },
+    {
+      "id":"4",
+      "title":"SCALP HIGHLIGHTS",
+      "Short hair": "€49.00",
+      "Medium length hair": "from € 62.00",
+      "Long hair": "from € 72.00"
+    },
+    {
+      "id":"5",
+      "title":"FULL HIGHLIGHTS",
+      "Short hair": "€59.00",
+      "Medium length hair": "€74.00",
+      "Long hair": "€87.00"
+    },
+    {
+      "id":"6",
+      "title":"PARMANENT",
+      "Short hair": "€45.00",
+      "Medium length hair": "€59.00",
+      "Long hair": "€79.00"
+    },
+    {
+      "id":"7",
+      "title":"OLAPLEX",
+      "Olaplex treatment": "€35.00",
+      "Surcharge thick hair": "from € 25,-"
     }
-  }
-  
+  ]
+}
+ 
