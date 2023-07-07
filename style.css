@@ -74,31 +74,75 @@ nav ul li a{
     padding-left: 350px;
  }
  /*----------------------------- price list-------------------- */
-
-
-  .priceListContainer {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+ .pricelist{   
+    width: 100%;
+    height: 100vh;
+    background-image: url(bambaaaa.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+ }
+ .priceListContainer {
+    font-family: Arial, sans-serif;
+    margin: 20px;
     padding: 20px;
+    background-color: #f8f8f8;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-  h2 {
-    font-size: 20px;
-    margin-top: 30px;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
+  
+  .priceListContainer h2 {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
   }
+  
+  .priceListContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .priceListContainer li {
+    margin-bottom: 8px;
+  }
+  
+  .priceListContainer li::before {
+    content: "• ";
+    color: #72b1f0;
+  }
+  
+  .priceListContainer li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .priceListContainer li span {
+    color: #0e0d0d;
+  }
+  
+  .priceListContainer li span::before {
+    content: "(";
+  }
+  
+  .priceListContainer li span::after {
+    content: ")";
+  }
+  
+  .priceListContainer li span::before,
+  .priceListContainer li span::after {
+    color: #85b3eb;
+  }
+  
+  .priceListContainer li em {
+    color: #40d9ff;
+    font-style: italic;
+  }
+  
+  .priceListContainer hr {
+    border: none;
+    border-top: 1px solid #7dd8e8;
+    margin: 20px 0;
+  }
+  
 
  /*------------------------------ vacancies------------------------- */
  .vacancies {
@@ -106,6 +150,7 @@ nav ul li a{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    
   }
 
   .right{
@@ -138,36 +183,133 @@ nav ul li a{
       width: 100%;
     }
   }
-/*-------------------------- comments----------------- */
-.testimonial-container {
-    width: 400px;
-    margin: 0 auto;
+  /*---------------------------- products------------------------------ */
+  #productList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 200px;
     text-align: center;
   }
   
-  .testimonial {
-    display: none;
+  .product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
   }
   
-  .testimonial.active {
-    display: block;
-  }
-  
-  #next-btn {
+  .product h3 {
     margin-top: 10px;
   }
   
+  .buyButton {
+    background-color: #4083ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #basket {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  #basket h2 {
+    margin-bottom: 10px;
+  }
+  
+  #basketItems {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  #basketItems li {
+    margin-bottom: 5px;
+  }
+  
+  #checkoutButton {
+    background-color: #6bcdf7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #checkoutButton:hover {
+    background-color: #303134;
+  }
+  
+  #checkoutButton:focus {
+    outline: none;
+  }
+  
+
+
+/*-------------------------- comments----------------- */
+#comments{
+
+  font-size: xx-large;
+  font-weight: 900;
+}
+.testimonial-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial {
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  background-color: #5b545a;
+  border-radius: 5px;
+ 
+}
+
+.testimonial.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonial p {
+  margin: 0;
+}
+
+.testimonial .author {
+  font-style: italic;
+  color: #50a7d6;
+}
+
+  
 
   /* ------------------contact ---------------------------*/
-
+  .contact{   
+    width: 100%;
+    height: 100vh;
+    background-image: url(yyyyyy.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+ }
 
 h1 {
-    color: #333;
+    color: hsl(0, 13%, 91%);
 }
 
 h2 {
     margin-top: 30px;
-    color: #555;
+    color: #f5eeee;
 }
 
 table {
@@ -188,7 +330,7 @@ form {
 label {
     display: block;
     margin-top: 10px;
-    color: #333;
+    color: #f8f5f5;
 }
 
 input[type="text"],
@@ -244,4 +386,19 @@ input[type="submit"]:hover {
   .footer-button:hover {
     background-color: #0056b3;
   }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
